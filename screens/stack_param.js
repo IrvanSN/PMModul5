@@ -6,6 +6,8 @@ import Article from "./article";
 
 const Stack = createNativeStackNavigator();
 
+// Mencoba React Native Navigator dengan file yang terpisah
+
 const StackParamScreen = () => {
   return (
     <NavigationContainer>

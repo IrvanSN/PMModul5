@@ -10,6 +10,8 @@ import {
     TouchableWithoutFeedback,
 } from "react-native";
 
+// Disini mencoba beberapa tombol dari komponen bawaan react native
+
 const TouchableScreen = () => {
     const onPressButton = () => {
         alert("You tapped the button!");
@@ -22,6 +24,7 @@ const TouchableScreen = () => {
     return (
         <View style={styles.container}>
             {/* TouchableHighlight */}
+            {/*Komponen yang memberikan umpan balik ketika disentuh dengan mengubah tampilan elemen menjadi highlight (membuat bayangan atau pencahayaan pada elemen) saat disentuh.*/}
             <TouchableHighlight onPress={onPressButton}>
                 <View style={styles.button}>
                     <Text style={styles.buttonText}>TouchableHighlight</Text>
@@ -31,6 +34,7 @@ const TouchableScreen = () => {
             <View style={{ marginBottom: 15 }} />
 
             {/* TouchableOpacity */}
+            {/*Mirip dengan TouchableHighlight, namun memberikan sedikit opacity pada elemen ketika disentuh, membuatnya sedikit tembus pandang atau translucent.*/}
             <TouchableOpacity onPress={onPressButton}>
                 <View style={styles.button}>
                     <Text style={styles.buttonText}>TouchableOpacity</Text>
@@ -40,6 +44,7 @@ const TouchableScreen = () => {
             <View style={{ marginBottom: 15 }} />
 
             {/* TouchableNativeFeedback */}
+            {/*Hanya tersedia di platform Android. Komponen ini memberikan umpan balik sentuhan yang mirip dengan perilaku default dari platform Android yang menggunakan efek sentuhan bawaan dari sistem.*/}
             <TouchableNativeFeedback
                 background={
                     Platform.OS === "android"
@@ -59,6 +64,7 @@ const TouchableScreen = () => {
             <View style={{ marginBottom: 15 }} />
 
             {/* TouchableWithoutFeedback */}
+            {/* Komponen ini memberikan respons saat disentuh tanpa memberikan umpan balik visual yang terlihat kepada pengguna. Biasanya digunakan ketika respons visual tidak diperlukan atau ketika respons telah dirancang melalui logika kustom.*/}
             <TouchableWithoutFeedback onPress={onPressButton}>
                 <View style={styles.button}>
                     <Text style={styles.buttonText}>TouchableWithoutFeedback</Text>
@@ -68,6 +74,7 @@ const TouchableScreen = () => {
             <View style={{ marginBottom: 15 }} />
 
             {/* OnLonggPress */}
+            {/*Menggunakan event listener onLongPress. event di panggil ketika tombol ditekan lama*/}
             <TouchableHighlight
                 onPress={onPressButton}
                 onLongPress={onLongPressButton}

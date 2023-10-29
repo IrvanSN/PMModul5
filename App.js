@@ -1,5 +1,5 @@
 import React from "react";
-import { View } from "react-native";
+import {Text, View} from "react-native";
 import {
   PressableScreen,
   StackHookScreen,
@@ -10,8 +10,15 @@ import {
 
 const App = () => {
   return (
-    <View style={{ paddingTop: 0, flex: 1 }}>
+    <View style={{ paddingTop: 50, flex: 1 }}>
+      <Text style={{textAlign: 'center'}}>Nama: Irvan Surya Nugraha</Text>
+      <Text style={{textAlign: 'center'}}>NIM: 1203210007</Text>
       {/* Panggil Screen Komponen Di Sini */}
+      {/*<PressableScreen />*/}
+      {/*<StackHookScreen />*/}
+      {/*<StackScreen/>*/}
+      {/*<TouchableScreen />*/}
+      <StackParamScreen />
     </View>
   );
 };

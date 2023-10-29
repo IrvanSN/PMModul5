@@ -12,7 +12,8 @@ const HomeScreen = ({ navigation }) => {
             <Button
                 title="Go to My profile"
                 color="black"
-                onPress={() => navigation.navigate("Profile", { name: "Daud" })} // Passing Data
+                /*melempar parameter/data ke screen selanjutnya*/
+                onPress={() => navigation.navigate("Profile", { name: "Irvan" })} // Passing Data
             />
         </View>
     );
@@ -21,7 +22,7 @@ const HomeScreen = ({ navigation }) => {
 const ProfileScreen = ({ navigation, route }) => {
     return (
         <View style={styles.container}>
-            {/* Get Data */}
+            {/* mengambil parameter/data yang telah dilempar dari page sebelumnya */}
             <Text style={{ fontSize: 24 }}>
                 This is {route.params.name}'s profile
             </Text>
